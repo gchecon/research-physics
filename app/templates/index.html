@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <title>Agente de Pesquisa Científica</title>
+</head>
+<body>
+  <h1>Upload de Artigo Científico</h1>
+  <form method="post" enctype="multipart/form-data">
+    <input type="file" name="pdf">
+    <input type="submit" value="Enviar">
+  </form>
+
+  {% if data %}
+    <h2>Resumo Extraído:</h2>
+    <p>{{ data.abstract }}</p>
+  {% endif %}
+</body>
+</html>
